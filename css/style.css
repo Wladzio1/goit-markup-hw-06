@@ -211,6 +211,8 @@ ul {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   justify-content: center;
   align-items: center;
+  height: 428px;
+  width: 264px;
 }
 
 .name-job-container {
@@ -841,6 +843,19 @@ footer {
   display: none;
 }
 
+.icon {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 @media (min-width: 768px) {
   .modal-window {
     max-width: 408px;
@@ -1062,7 +1077,6 @@ footer {
     margin-left: auto;
     margin-right: auto;
     cursor: pointer;
-    padding: 0;
     background-color: #4d5ae5;
     font-size: 16px;
     line-height: 1.5;
@@ -1090,7 +1104,6 @@ footer {
     font-size: 18px;
     line-height: 1.17;
     letter-spacing: 0.03em;
-    margin-right: 76px;
     text-transform: uppercase;
     color: #4d5ae5;
     .span {
@@ -1100,7 +1113,7 @@ footer {
 
   .contact {
     display: block;
-    padding: 24px;
+    padding: 0;
     font-style: normal;
     font-size: 16px;
     line-height: 1.5;
@@ -1126,19 +1139,18 @@ footer {
       url(../images/img-6.jpg);
     background-color: #2e2f42;
     padding: 188px 0 188px 0;
-    max-width: 1440px;
+    width: 100%;
+    max-height: 600px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0;
   }
 
   .heading {
     margin-left: auto;
     margin-right: auto;
-    padding: 0;
     margin-bottom: 48px;
     font-size: 56px;
     line-height: 1.07;
@@ -1305,21 +1317,14 @@ footer {
 
   .address {
     font-style: normal;
-    margin-left: auto;
   }
 
   .team-list {
-    gap: 24px;
-    list-style: none;
     display: flex;
-    flex-direction: row;
-    column-gap: 24px;
-    row-gap: 72px;
+    gap: 24px;
     flex-wrap: wrap;
     padding: 0;
-    margin: 0;
-    align-items: flex-start;
-    justify-content: flex-start;
+    list-style: none;
   }
 
   .logo-footer {
@@ -1378,13 +1383,15 @@ footer {
     display: flex;
   }
 
-  .container-head {
-    gap: 48px;
+  .container-header {
+    width: 1158px;
+    margin: 0 auto;
+    display: flex;
   }
 
   .container {
-    display: flex;
-    flex-direction: row;
+    margin: 0 auto;
+    padding: 0 156px 0 156px;
   }
 
   .container-footer {
@@ -1393,7 +1400,10 @@ footer {
   }
 
   .head-nav {
+    display: flex;
     align-items: center;
+    width: 100%;
+    justify-content: space-between;
   }
 
   .navigation {
@@ -1403,6 +1413,7 @@ footer {
 
   .contact-info {
     display: flex;
+    flex-direction: row;
     gap: 40px;
   }
 
@@ -1437,6 +1448,9 @@ footer {
 
   .icon {
     display: flex;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
     align-items: center;
     justify-content: center;
     height: 112px;
@@ -1596,7 +1610,7 @@ footer {
   }
 
   .modal-window-container {
-    position: relative;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
