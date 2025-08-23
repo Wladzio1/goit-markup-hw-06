@@ -160,6 +160,8 @@ ul {
 }
 
 .container-benefits {
+  align-items: center;
+  justify-content: center;
   margin: 96px 16px 96px 16px;
 }
 
@@ -220,6 +222,10 @@ ul {
   flex-direction: column;
   margin: 32px 16px 32px 16px;
   gap: 8px;
+}
+
+.portfolio-card-par-violet {
+  display: none;
 }
 
 .team-card-head,
@@ -844,16 +850,7 @@ footer {
 }
 
 .icon {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+  display: none;
 }
 
 @media (min-width: 768px) {
@@ -935,6 +932,7 @@ footer {
   .container-benefits {
     display: flex;
     flex-direction: row;
+    margin: 96px 156px 96px 156px;
   }
 
   .ben-list-elem {
@@ -1160,17 +1158,12 @@ footer {
     max-width: 496px;
   }
 
-  .adv-sect {
-    padding: 120px 0 120px 0;
-  }
-
   .adv-head {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
-    margin-bottom: 8px;
   }
 
   .adv-par {
@@ -1210,10 +1203,6 @@ footer {
     text-align: center;
   }
 
-  .portfolio-sect {
-    padding: 120px 0 120px 0;
-  }
-
   .portfolio-sect-head {
     font-size: 36px;
     line-height: 1.11;
@@ -1244,6 +1233,7 @@ footer {
     flex-wrap: wrap;
     column-gap: 24px;
     row-gap: 48px;
+    margin: 0;
   }
 
   .portfolio-card {
@@ -1427,6 +1417,7 @@ footer {
 
   .ben-list-elem {
     flex-basis: calc((100% - 72px) / 4);
+    width: 264px;
   }
 
   .team-sect {
@@ -1454,6 +1445,7 @@ footer {
     align-items: center;
     justify-content: center;
     height: 112px;
+    width: 264px;
     background-color: #f4f4fd;
     border: 1px solid #8e8f99;
     border-radius: 4px;
@@ -1498,6 +1490,7 @@ footer {
   }
 
   .portfolio-card-par-violet {
+    display: flex;
     position: absolute;
     top: 0;
     font-size: 16px;
@@ -1585,6 +1578,10 @@ footer {
 
   .subscribe-input::placeholder {
     color: #ffffff;
+  }
+
+  .container-portfolio {
+    padding: 0 156px 120px 156px;
   }
 
   .subscribe-button {
