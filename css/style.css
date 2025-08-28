@@ -3,6 +3,7 @@ body {
   overflow-x: hidden;
 }
 img {
+  display: block;
   max-width: 100%;
   height: auto;
 }
@@ -14,7 +15,21 @@ img {
 }
 
 .container {
-  padding: 16px;
+  max-width: 320px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+.header-container {
+  align-items: center;
+}
+
+.burger-btn {
+  display: block;
+  fill: #2f2f37;
+  padding: 0;
+  border: none;
+  background-color: transparent;
 }
 
 body {
@@ -28,7 +43,7 @@ body {
 }
 
 .logo-head {
-  padding: 0;
+  padding: 16px 0;
   display: inline-block;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -162,7 +177,7 @@ ul {
 .container-benefits {
   align-items: center;
   justify-content: center;
-  margin: 96px 16px 96px 16px;
+  margin: 96px auto;
 }
 
 .ben-list-elem {
@@ -186,12 +201,10 @@ ul {
 
 .team-list {
   display: flex;
+  flex-direction: column;
   padding: 0;
   margin: 0;
   gap: 72px;
-}
-
-.team-list:last-child {
   margin-bottom: 96px;
 }
 
@@ -293,7 +306,8 @@ ul {
   flex-wrap: wrap;
   column-gap: 24px;
   row-gap: 48px;
-  padding: 0 16px;
+  padding: 0;
+  margin: 0 0 96px 0;
 }
 
 .portfolio-sect-head {
@@ -303,7 +317,7 @@ ul {
   letter-spacing: 2%;
   text-transform: capitalize;
   color: #2e2f42;
-  margin: 96px 51px 72px 51px;
+  margin: 96px 0 72px 0;
 }
 
 .portfolio-card {
@@ -853,9 +867,13 @@ footer {
   display: none;
 }
 
-@media (min-width: 768px) {
-  .modal-window {
-    max-width: 408px;
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+
+  .burger-btn {
+    display: none;
   }
 
   .menu-icon {
@@ -894,7 +912,6 @@ footer {
     position: relative;
     color: #404bbf;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    margin-top: 20px;
   }
 
   .current::after {
@@ -932,7 +949,6 @@ footer {
   .container-benefits {
     display: flex;
     flex-direction: row;
-    margin: 96px 156px 96px 156px;
   }
 
   .ben-list-elem {
@@ -954,7 +970,6 @@ footer {
   }
 
   .team-list {
-    gap: 24px;
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -962,7 +977,7 @@ footer {
     row-gap: 64px;
     flex-wrap: wrap;
     padding: 0;
-    margin: 0 108px 0 108px;
+    margin: 0 92px 96px 92px;
     align-items: flex-start;
     justify-content: flex-start;
   }
@@ -974,9 +989,15 @@ footer {
     row-gap: 72px;
     flex-wrap: wrap;
     padding: 0;
-    margin: 0 16px 96px 16px;
+    margin: 0 0 96px 0;
     align-items: flex-start;
     justify-content: flex-start;
+  }
+
+  .adv-sect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .portfolio-card {
@@ -1059,10 +1080,11 @@ footer {
   .modal-window {
     max-height: 584px;
     max-width: 408px;
+    padding: 72px 24px 24px 24px;
   }
 }
 
-@media (min-width: 1440px) {
+@media screen and (min-width: 1158px) {
   body {
     font-family: "Roboto", sans-serif;
     color: #434455;
@@ -1094,19 +1116,6 @@ footer {
   button:hover,
   button:focus {
     background-color: #404bbf;
-  }
-
-  .logo-head {
-    font-family: "Raleway", sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: #4d5ae5;
-    .span {
-      color: #2e2f42;
-    }
   }
 
   .contact {
@@ -1310,6 +1319,7 @@ footer {
   }
 
   .team-list {
+    margin: 0;
     display: flex;
     gap: 24px;
     flex-wrap: wrap;
@@ -1335,10 +1345,6 @@ footer {
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
       0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-  }
-
-  .name-job-container {
-    padding: 32px 0;
   }
 
   h1,
@@ -1373,15 +1379,8 @@ footer {
     display: flex;
   }
 
-  .container-header {
-    width: 1158px;
-    margin: 0 auto;
-    display: flex;
-  }
-
   .container {
-    margin: 0 auto;
-    padding: 0 156px 0 156px;
+    max-width: 100%;
   }
 
   .container-footer {
@@ -1418,10 +1417,6 @@ footer {
   .ben-list-elem {
     flex-basis: calc((100% - 72px) / 4);
     width: 264px;
-  }
-
-  .team-sect {
-    padding: 120px 0 120px 0;
   }
 
   .visually-hidden {
