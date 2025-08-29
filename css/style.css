@@ -1029,6 +1029,17 @@ footer {
     justify-content: center;
   }
 
+
+  .nav {
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
+    padding: 24px 0 24px 0;
+  }
+
   .subscribe-form {
     display: flex;
     flex-direction: row;
@@ -1380,7 +1391,8 @@ footer {
   }
 
   .container {
-    max-width: 100%;
+    max-width: 1158px;
+    padding: 0 15px;
   }
 
   .container-footer {
@@ -1391,13 +1403,18 @@ footer {
   .head-nav {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     width: 100%;
-    justify-content: space-between;
+  }
+
+  .logo-head {
+    margin-right: 76px;
   }
 
   .navigation {
     display: flex;
     gap: 40px;
+    margin-right: 332px;
   }
 
   .contact-info {
@@ -1821,5 +1838,9 @@ footer {
 
   .subscribe-container {
     margin-left: auto;
+  }
+
+  .container-team {
+    padding: 0 15px 120px 15px;
   }
 }
