@@ -73,7 +73,7 @@ body {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/img-6.jpg);
+    url(../images/1x/img-6.jpg);
   background-color: #2e2f42;
   background-repeat: no-repeat;
   background-position: center;
@@ -1136,7 +1136,7 @@ footer {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/img-6.jpg);
+      url(../images/1x/img-6.jpg);
     padding: 188px 0;
     width: 100%;
     max-height: 600px;
@@ -1788,5 +1788,15 @@ footer {
 
   section {
     padding: 120px 0;
+  }
+}
+
+@media (min-resolution: 3dppx) {
+  .main {
+    background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/2x/img-6-2x.jpg);
   }
 }
